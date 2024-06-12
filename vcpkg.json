@@ -1,0 +1,19 @@
+{
+  "name": "privacy-screen",
+  "version-string": "latest",
+  "builtin-baseline": "c9140a3b500812ad3206317885860d9553b93f13",
+  "dependencies": [
+    {
+      "name": "glfw3",
+      "version>=": "3.3.6"
+    },
+    {
+      "name": "opengl",
+      "version>=": "2022-12-04#3"
+    },
+    {
+      "name": "glew",
+      "version>=": "2.2.0#3"
+    }
+  ]
+}

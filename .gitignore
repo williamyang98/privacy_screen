@@ -1,0 +1,14 @@
+.vscode/
+build/
+build_*/
+build-*/
+data/
+images/
+imgui.ini
+*.ini
+*.log
+logs.txt
+dab_radio_windows_x64*/
+dab_radio_windows_x64*.zip
+.cache/
+CMakeUserPresets.json
