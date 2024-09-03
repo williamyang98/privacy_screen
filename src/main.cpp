@@ -6,6 +6,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <array>
+#include <chrono>
+#include <thread>
 #include <optional>
 #include <vector>
 
@@ -267,7 +269,7 @@ int main(int argc, char** argv) {
         glfwSetWindowPos(window, x, y);
         // glfwSetWindowMonitor(window, monitor, 0, 0, mode->width, mode->height, mode->refreshRate);
         glfwMakeContextCurrent(window);
-        glfwSwapInterval(1);
+        // glfwSwapInterval(1);
         windows.push_back(window);
     }
     // create opengl program
@@ -345,6 +347,11 @@ int main(int argc, char** argv) {
         }
         if (should_close) {
             break;
+        }
+        if (should_show) {
+            std::this_thread::sleep_for(std::chrono::milliseconds(100));
+        } else {
+            std::this_thread::sleep_for(std::chrono::milliseconds(10));
         }
         glfwPollEvents();
     }
